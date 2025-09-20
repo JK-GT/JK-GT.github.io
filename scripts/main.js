@@ -108,7 +108,7 @@ function login() {
   };
 
   // 发送POST请求到API获取Token
-  fetch("/api/admin/openapi/auth/getToken", requestOptions)
+  fetch("http://site.zhdgps.com:9002/admin/openapi/auth/getToken", requestOptions)
     .then((response) => response.json())
     .then((result) => {
       if (result.code === 200) {
@@ -132,3 +132,4 @@ function login() {
       console.log("error", error);
     });
 }
+
