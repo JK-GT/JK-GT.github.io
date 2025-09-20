@@ -1,0 +1,215 @@
+/* 全局设置页面基础样式 */
+html {
+  font-size: 16px; /* 设置基础字体大小为16像素 */
+  font-family: "Microsoft YaHei", "Open Sans", Arial, sans-serif; /* 设置常用中文和英文字体 */
+  background: linear-gradient(
+    135deg,
+    #e0eafc 0%,
+    #cfdef3 100%
+  ); /* 渐变背景提升质感 */
+  min-height: 100%; /* 页面最小高度为100% */
+}
+
+/* 设置页面主体区域样式 */
+body {
+  max-width: 1440px; /* 最大宽度限制为1440像素，适应大屏显示 */
+  margin: 40px auto 0 auto; /* 页面内容水平居中，顶部留白 */
+  padding: 32px 24px 40px 24px; /* 上下左右内边距，防止内容贴边 */
+  background-color: #ffffffcc; /* 半透明白色背景，提升层次感 */
+  border-radius: 18px; /* 更柔和的圆角边框 */
+  box-shadow: 0 8px 32px rgba(0, 64, 128, 0.1), 0 1.5px 8px rgba(0, 0, 0, 0.06); /* 多重阴影更有层次 */
+  -webkit-backdrop-filter: blur(2px); /* 添加对苹果OS的Safari浏览器的支持 */
+  backdrop-filter: blur(2px); /* 毛玻璃效果 */
+}
+
+/* 全屏切换按钮样式 */
+#fullscreen-btn {
+  position: fixed; /* 固定在页面右上角 */
+  top: 20px;
+  right: 30px;
+  z-index: 1000; /* 保证按钮在最上层 */
+  padding: 12px 28px; /* 按钮内边距 */
+  background: linear-gradient(90deg, #4f8cff 0%, #1cb5e0 100%); /* 渐变背景 */
+  color: #fff; /* 文字颜色 */
+  border: none; /* 无边框 */
+  border-radius: 24px; /* 圆角 */
+  box-shadow: 0 4px 16px rgba(79, 140, 255, 0.15); /* 按钮阴影 */
+  font-size: 16px; /* 字体大小 */
+  font-weight: bold; /* 字体加粗 */
+  cursor: pointer; /* 鼠标悬停为手型 */
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s; /* 动效过渡 */
+}
+
+/* 全屏按钮悬停样式 */
+#fullscreen-btn:hover {
+  background: linear-gradient(90deg, #1cb5e0 0%, #4f8cff 100%); /* 渐变反转 */
+  box-shadow: 0 6px 24px rgba(28, 181, 224, 0.25); /* 更强阴影 */
+  transform: translateY(-2px) scale(1.04); /* 悬停微微上移放大 */
+}
+
+/* 全屏按钮点击样式 */
+#fullscreen-btn:active {
+  background: #1cb5e0; /* 按下时背景色 */
+  transform: scale(0.98); /* 按下时微缩 */
+}
+
+/* 一级标题样式 */
+h1 {
+  font-size: 54px; /* 更大标题字体 */
+  color: #0077c8; /* 更亮的蓝色 */
+  text-align: center; /* 居中显示 */
+  margin-top: 0;
+  margin-bottom: 36px;
+  letter-spacing: 3px; /* 字间距 */
+  text-shadow: 0 4px 18px #b3d8f7, 0 1px 0 #fff; /* 阴影和高光 */
+  font-weight: 700; /* 加粗 */
+}
+
+/* 登录面板样式 */
+.login-panel {
+  width: 350px; /* 固定宽度 */
+  margin: 40px auto 20px auto; /* 水平居中，顶部留白 */
+  padding: 32px 24px 24px 24px; /* 内边距 */
+  background: #fff; /* 白色背景 */
+  border-radius: 16px; /* 圆角 */
+  box-shadow: 0 4px 24px rgba(79, 140, 255, 0.12); /* 阴影 */
+  display: flex; /* 弹性布局 */
+  flex-direction: column; /* 垂直排列 */
+  align-items: center; /* 水平居中内容 */
+  justify-content: center; /* 垂直居中内容 */
+  position: relative; /* 相对定位 */
+  left: 50%; /* 水平居中辅助 */
+  transform: translateX(-50%); /* 水平居中辅助 */
+}
+
+/* 登录面板标题样式 */
+.login-panel h2 {
+  margin-bottom: 18px;
+  color: #4f8cff; /* 标题颜色 */
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* 登录行样式（每一行输入或标签） */
+.login-row {
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex; /* 弹性布局 */
+  align-items: center; /* 垂直居中 */
+}
+
+/* 登录标签样式 */
+.login-row label {
+  width: 80px; /* 固定宽度 */
+  font-size: 15px;
+  color: #333;
+}
+
+/* 登录输入框样式 */
+.login-row input {
+  flex: 1; /* 占满剩余空间 */
+  padding: 8px 12px;
+  border: 1px solid #d0e2ff;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+/* 输入框聚焦样式 */
+.login-row input:focus {
+  border-color: #4f8cff; /* 聚焦时边框变蓝 */
+}
+
+/* 登录按钮样式 */
+#login-btn {
+  width: 100%; /* 占满面板宽度 */
+  padding: 10px 0;
+  background: linear-gradient(90deg, #4f8cff 0%, #1cb5e0 100%); /* 渐变背景 */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08); /* 按钮阴影 */
+}
+
+/* 登录按钮悬停样式 */
+#login-btn:hover {
+  background: linear-gradient(90deg, #1cb5e0 0%, #4f8cff 100%);
+}
+
+/* 登录提示信息样式 */
+.login-msg {
+  margin-top: 10px;
+  color: #e74c3c; /* 红色提示 */
+  font-size: 14px;
+  min-height: 18px;
+  text-align: center;
+}
+
+/* iframe容器样式 */
+.iframe-container {
+  display: none;
+}
+
+/* 钻孔数据页面和物联盒子页面容器样式，4:3比例，最大宽高 */
+.iframe-container {
+  aspect-ratio: 4/3;
+  max-width: 1920px;
+  max-height: 1440px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto 40px auto;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 119, 200, 0.1), 0 1.5px 8px rgba(0, 0, 0, 0.06);
+  background: linear-gradient(120deg, #fafdff 60%, #e0eafc 100%);
+  position: relative;
+  border: 1.5px solid #b3d8f7;
+}
+
+/* 修改id为 drill-data 的iframe容器内的iframe样式 */
+#drill-data.iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4/3;
+  border: none;
+  border-radius: 16px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-shadow: none;
+  transition: filter 0.3s;
+  zoom: 1;
+  transform: scale(1);
+}
+
+/* 修改id为 iot-box 的iframe容器内的iframe样式 */
+#iot-box.iframe-container iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4/3;
+  border: none;
+  border-radius: 16px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-shadow: none;
+  transition: filter 0.3s;
+  zoom: 1;
+  transform: scale(1);
+}
+
+/* iframe 聚焦时阴影效果 */
+.iframe-container iframe:focus {
+  filter: drop-shadow(0 0 8px rgba(0, 119, 200, 0.6));
+}
